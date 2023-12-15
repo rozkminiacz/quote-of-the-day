@@ -1,4 +1,5 @@
 import com.google.cloud.tools.gradle.appengine.appyaml.AppEngineAppYamlExtension
+import org.gradle.initialization.Environment
 
 plugins {
     alias(libs.plugins.kotlinJvm)
@@ -33,8 +34,23 @@ dependencies {
     implementation(libs.ktor.server.core)
     implementation(libs.ktor.server.netty)
     implementation(libs.ktor.server.content.negotiation)
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.jvm)
+    implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.serialization.kotlinx.json)
     implementation(libs.kotlinx.serialization.json)
     testImplementation(libs.ktor.server.tests)
     testImplementation(libs.kotlin.test.junit)
 }
+
+fun loadEnv() {
+
+
+    file("$rootDir/.env").readLines().forEach {
+        val (key, value) = it.split('=')
+        System.setProperty(key, value)
+    }
+//    commandLine 'fooScript.sh'
+}
+
+loadEnv()

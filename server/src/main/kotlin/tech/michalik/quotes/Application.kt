@@ -10,6 +10,7 @@ import io.ktor.server.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import kotlinx.serialization.json.Json
+import tech.michalik.quotes.data.AirtableRepository
 
 fun main() {
     embeddedServer(Netty, port = SERVER_PORT, host = "0.0.0.0", module = Application::module)
@@ -18,7 +19,10 @@ fun main() {
 
 fun Application.module() {
 
-    val db = QuotesDatabase()
+    val db = AirtableRepository(
+        url = environment.config.property("ktor.airtable.url").getString(),
+        key = environment.config.property("ktor.airtable.key").getString(),
+    )
 
     configureSerialization()
     routing {
@@ -35,14 +39,14 @@ fun Application.configureSerialization() {
 }
 
 
-class QuotesDatabase{
+class QuotesDatabase {
 
-    val content by lazy{
+    val content by lazy {
         object {}.javaClass.classLoader.getResource("quotes.json").readText()
     }
 
     fun getAll(): List<QuoteJson> {
-      return Json.decodeFromString<List<QuoteJson>>(content)
+        return Json.decodeFromString<List<QuoteJson>>(content)
     }
 }
 
