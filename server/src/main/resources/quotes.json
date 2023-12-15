@@ -1,0 +1,354 @@
+[
+  {
+    "quote": "You have your way. I have my way. As for the right way, the correct way, and the only way, it does not exist.",
+    "author": "Friedrich Wilhelm Nietzsche",
+    "categories": [
+      "philosophy",
+      "individuality"
+    ]
+  },
+  {
+    "quote": "He who fights with monsters should be careful lest he thereby become a monster.",
+    "author": "Friedrich Wilhelm Nietzsche",
+    "categories": [
+      "philosophy",
+      "ethics"
+    ]
+  },
+  {
+    "quote": "To live is to suffer, to survive is to find some meaning in the suffering.",
+    "author": "Friedrich Wilhelm Nietzsche",
+    "categories": [
+      "philosophy",
+      "existence"
+    ]
+  },
+  {
+    "quote": "The greatest happiness you can have is knowing that you do not necessarily require happiness.",
+    "author": "William Arthur Schopenhauer",
+    "categories": [
+      "philosophy",
+      "happiness"
+    ]
+  },
+  {
+    "quote": "Talent hits a target no one else can hit; Genius hits a target no one else can see.",
+    "author": "Arthur Schopenhauer",
+    "categories": [
+      "philosophy",
+      "creativity"
+    ]
+  },
+  {
+    "quote": "Compassion is the basis of morality.",
+    "author": "Arthur Schopenhauer",
+    "categories": [
+      "philosophy",
+      "ethics"
+    ]
+  },
+  {
+    "quote": "The only true wisdom is in knowing you know nothing.",
+    "author": "Plato",
+    "categories": [
+      "philosophy",
+      "knowledge"
+    ]
+  },
+  {
+    "quote": "One of the penalties for refusing to participate in politics is that you end up being governed by your inferiors.",
+    "author": "Plato",
+    "categories": [
+      "philosophy",
+      "politics"
+    ]
+  },
+  {
+    "quote": "Wise men speak because they have something to say; Fools because they have to say something.",
+    "author": "Plato",
+    "categories": [
+      "philosophy",
+      "wisdom"
+    ]
+  },
+  {
+    "quote": "The best revenge is to be unlike him who performed the injustice.",
+    "author": "Marcus Aurelius",
+    "categories": [
+      "philosophy",
+      "justice"
+    ]
+  },
+  {
+    "quote": "You have power over your mind - not outside events. Realize this, and you will find strength.",
+    "author": "Marcus Aurelius",
+    "categories": [
+      "philosophy",
+      "mindfulness"
+    ]
+  },
+  {
+    "quote": "The happiness of your life depends upon the quality of your thoughts.",
+    "author": "Marcus Aurelius",
+    "categories": [
+      "philosophy",
+      "happiness"
+    ]
+  },
+  {
+    "quote": "That which does not kill us makes us stronger.",
+    "author": "Friedrich Wilhelm Nietzsche",
+    "categories": [
+      "philosophy",
+      "resilience"
+    ]
+  },
+  {
+    "quote": "Without music, life would be a mistake.",
+    "author": "Friedrich Wilhelm Nietzsche",
+    "categories": [
+      "philosophy",
+      "music"
+    ]
+  },
+  {
+    "quote": "There is always some madness in love. But there is also always some reason in madness.",
+    "author": "Friedrich Wilhelm Nietzsche",
+    "categories": [
+      "philosophy",
+      "love"
+    ]
+  },
+  {
+    "quote": "All truth is simple... is that not doubly a lie?",
+    "author": "Friedrich Wilhelm Nietzsche",
+    "categories": [
+      "philosophy",
+      "truth"
+    ]
+  },
+  {
+    "quote": "Every man takes the limits of his own field of vision for the limits of the world.",
+    "author": "Arthur Schopenhauer",
+    "categories": [
+      "philosophy",
+      "perspective"
+    ]
+  },
+  {
+    "quote": "Change is the only constant.",
+    "author": "Heraclitus",
+    "categories": [
+      "philosophy",
+      "change"
+    ]
+  },
+  {
+    "quote": "The more you know, the more you realize you know nothing.",
+    "author": "Socrates",
+    "categories": [
+      "philosophy",
+      "knowledge"
+    ]
+  },
+  {
+    "quote": "The unexamined life is not worth living.",
+    "author": "Socrates",
+    "categories": [
+      "philosophy",
+      "introspection"
+    ]
+  },
+  {
+    "quote": "He who angers you conquers you.",
+    "author": "Elizabeth Kenny",
+    "categories": [
+      "philosophy",
+      "emotions"
+    ]
+  },
+  {
+    "quote": "If you want to be happy, be.",
+    "author": "Leo Tolstoy",
+    "categories": [
+      "philosophy",
+      "happiness"
+    ]
+  },
+  {
+    "quote": "Life is really simple, but we insist on making it complicated.",
+    "author": "Confucius",
+    "categories": [
+      "philosophy",
+      "simplicity"
+    ]
+  },
+  {
+    "quote": "The only way to do great work is to love what you do.",
+    "author": "Steve Jobs",
+    "categories": [
+      "philosophy",
+      "work"
+    ]
+  },
+  {
+    "quote": "It is not death that a man should fear, but he should fear never beginning to live.",
+    "author": "Marcus Aurelius",
+    "categories": [
+      "philosophy",
+      "life"
+    ]
+  },
+  {
+    "quote": "Waste no more time arguing about what a good man should be. Be one.",
+    "author": "Marcus Aurelius",
+    "categories": [
+      "philosophy",
+      "action"
+    ]
+  },
+  {
+    "quote": "Life is what happens when you're busy making other plans.",
+    "author": "John Lennon",
+    "categories": [
+      "philosophy",
+      "life"
+    ]
+  },
+  {
+    "quote": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+    "author": "Buddha",
+    "categories": [
+      "philosophy",
+      "mindfulness"
+    ]
+  },
+  {
+    "quote": "The journey of a thousand miles begins with one step.",
+    "author": "Lao Tzu",
+    "categories": [
+      "philosophy",
+      "action"
+    ]
+  },
+  {
+    "quote": "Knowing yourself is the beginning of all wisdom.",
+    "author": "Aristotle",
+    "categories": [
+      "philosophy",
+      "self-awareness"
+    ]
+  },
+  {
+    "quote": "It is the mark of an educated mind to be able to entertain a thought without accepting it.",
+    "author": "Aristotle",
+    "categories": [
+      "philosophy",
+      "critical thinking"
+    ]
+  },
+  {
+    "quote": "The only true wisdom is in knowing you know nothing.",
+    "author": "Socrates",
+    "categories": [
+      "philosophy",
+      "knowledge"
+    ]
+  },
+  {
+    "quote": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+    "author": "Aristotle",
+    "categories": [
+      "philosophy",
+      "habit"
+    ]
+  },
+  {
+    "quote": "The roots of education are bitter, but the fruit is sweet.",
+    "author": "Aristotle",
+    "categories": [
+      "philosophy",
+      "education"
+    ]
+  },
+  {
+    "quote": "Pleasure in the job puts perfection in the work.",
+    "author": "Aristotle",
+    "categories": [
+      "philosophy",
+      "work"
+    ]
+  },
+  {
+    "quote": "I think, therefore I am.",
+    "author": "René Descartes",
+    "categories": [
+      "philosophy",
+      "existence"
+    ]
+  },
+  {
+    "quote": "The only thing I know is that I know nothing.",
+    "author": "Socrates",
+    "categories": [
+      "philosophy",
+      "knowledge"
+    ]
+  },
+  {
+    "quote": "The life of man, solitary, poor, nasty, brutish, and short.",
+    "author": "Thomas Hobbes",
+    "categories": [
+      "philosophy",
+      "human nature"
+    ]
+  },
+  {
+    "quote": "Liberty consists in doing what one desires.",
+    "author": "John Stuart Mill",
+    "categories": [
+      "philosophy",
+      "freedom"
+    ]
+  },
+  {
+    "quote": "Man is condemned to be free.",
+    "author": "Jean-Paul Sartre",
+    "categories": [
+      "philosophy",
+      "freedom"
+    ]
+  },
+  {
+    "quote": "Existence precedes essence.",
+    "author": "Jean-Paul Sartre",
+    "categories": [
+      "philosophy",
+      "existence"
+    ]
+  },
+  {
+    "quote": "Hell is other people.",
+    "author": "Jean-Paul Sartre",
+    "categories": [
+      "philosophy",
+      "society"
+    ]
+  },
+  {
+    "quote": "The only thing necessary for the triumph of evil is for good men to do nothing.",
+    "author": "Edmund Burke",
+    "categories": [
+      "philosophy",
+      "ethics"
+    ]
+  },
+  {
+    "quote": "Those who cannot remember the past are condemned to repeat it.",
+    "author": "George Santayana",
+    "categories": [
+      "philosophy",
+      "history"
+    ]
+  }
+]

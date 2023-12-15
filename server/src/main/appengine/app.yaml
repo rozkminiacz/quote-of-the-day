@@ -1,0 +1,2 @@
+runtime: java17
+entrypoint: 'java -jar server-all.jar'
