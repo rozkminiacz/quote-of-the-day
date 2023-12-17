@@ -1,0 +1,18 @@
+appId: tech.michalik.quotes
+---
+- launchApp
+- assertVisible: "The only true wisdom is in knowing you know nothing."
+
+- swipe:
+    start: 53%,72%
+    end: 56%,43%
+    duration: 383
+
+- assertVisible: "If you want to be happy, be."
+
+- swipe:
+    start: 53%,72%
+    end: 56%,43%
+    duration: 383
+
+- assertVisible: "Socrates"
