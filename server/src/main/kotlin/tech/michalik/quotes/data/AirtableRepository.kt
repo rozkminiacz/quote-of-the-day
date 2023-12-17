@@ -8,6 +8,7 @@ import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.request.header
 import io.ktor.client.request.prepareGet
 import io.ktor.serialization.kotlinx.json.json
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.serialization.json.Json
 
 /**
@@ -20,11 +21,24 @@ class AirtableRepository(val url: String, val key: String) {
         }
     }
 
-    suspend fun getAll(): List<QuoteJson> = client.prepareGet(url) {
-        header("Authorization", "Bearer $key")
-    }.execute<ApiResponse> {
-        it.body()
-    }.map()
+    private val state = MutableStateFlow<List<QuoteJson>>(emptyList())
+
+    suspend fun getAll(): List<QuoteJson> {
+
+        val list = state.value
+
+        if(list.isNotEmpty()) return list
+
+        val quoteJsonList = client.prepareGet(url) {
+            header("Authorization", "Bearer $key")
+        }.execute<ApiResponse> {
+            it.body()
+        }.map()
+
+        state.emit(quoteJsonList)
+
+        return quoteJsonList
+    }
 }
 
 fun ApiResponse.map(): List<QuoteJson> {

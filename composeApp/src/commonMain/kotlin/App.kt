@@ -1,21 +1,22 @@
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.MarqueeSpacing
+import androidx.compose.foundation.gestures.detectVerticalDragGestures
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material.Card
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.ListItem
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.model.StateScreenModel
 import cafe.adriel.voyager.core.model.rememberScreenModel
@@ -24,16 +25,22 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.Navigator
 import data.Api
 import data.QuoteJson
+import feed.FeedScreen
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 
+
+@Composable
+fun App() {
+    Navigator(
+        screen = HomeScreen()
+    )
+}
+
 class HomeScreen : Screen {
 
-    @OptIn(ExperimentalResourceApi::class, ExperimentalMaterialApi::class,
-        ExperimentalFoundationApi::class
-    )
     @Composable
     override fun Content() {
 
@@ -41,46 +48,21 @@ class HomeScreen : Screen {
 
             val screenModel = rememberScreenModel {
                 MainViewModel(
-//                    api = Api("http://192.168.0.192:8080")
                     api = Api("https://quotes-408216.lm.r.appspot.com")
                 )
             }
 
             val viewState = screenModel.state.collectAsState()
 
-            Box {
-                LazyColumn() {
-                    item {
-                        Text("Quotes. Size: ${viewState.value.elements.size}")
-                    }
-                    items(viewState.value.elements) {
-                        Card(modifier = Modifier.fillMaxWidth().padding(12.dp)) {
-                            Column(Modifier.padding(4.dp)) {
-                                Row {
-                                    Text(it.author)
-                                }
-                                Row {
-                                    Text(it.categories.joinToString { it.value })
-                                }
-                                Row {
-                                    Text(it.quote)
-                                }
-                            }
-                        }
-                    }
-                }
+            FeedScreen(initialPage = 0, content = viewState.value.elements, click = {share(it)}){ page, index ->
+                screenModel.pageVisible(page, index)
             }
         }
-
-
     }
-}
 
-@Composable
-fun App() {
-    Navigator(
-        screen = HomeScreen()
-    )
+    private fun share(quote: QuoteJson) {
+        // todo
+    }
 }
 
 class MainViewModel(val api: Api) : StateScreenModel<ListViewState>(ListViewState.INITIAL) {
@@ -100,6 +82,10 @@ class MainViewModel(val api: Api) : StateScreenModel<ListViewState>(ListViewStat
             }
         }
     }
+
+    fun pageVisible(page: QuoteJson, index: Int) {
+
+    }
 }
 
 data class ListViewState(val elements: List<QuoteJson>) {
@@ -107,3 +93,4 @@ data class ListViewState(val elements: List<QuoteJson>) {
         val INITIAL = ListViewState(emptyList())
     }
 }
+
